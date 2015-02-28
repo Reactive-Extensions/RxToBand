@@ -240,7 +240,7 @@ namespace RxToBandSample
                 //
                 // Hourly average speed in different modes of transport.
                 //
-                var averageWalkingSpeed = from w in distance.OnlyWhenWorn(contact).Window(TimeSpan.FromSeconds(5))
+                var averageWalkingSpeed = from w in distance.OnlyWhenWorn(contact).Window(TimeSpan.FromHours(1))
                                           from a in (from d in w
                                                      group d by d.CurrentMotion into g // TODO: while testing, I didn't get any values other than Idle here
                                                      from avg in g.DefaultIfEmpty().Average(d => d.Speed)
