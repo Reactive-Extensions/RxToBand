@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Band.Reactive", "Microsoft.Band.Reactive\Microsoft.Band.Reactive.csproj", "{92225543-F2BB-47BD-B52F-2284B8B5C3AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Debug|ARM.ActiveCfg = Debug|ARM
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Debug|ARM.Build.0 = Debug|ARM
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Debug|x86.ActiveCfg = Debug|x86
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Debug|x86.Build.0 = Debug|x86
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Release|ARM.ActiveCfg = Release|ARM
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Release|ARM.Build.0 = Release|ARM
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Release|x86.ActiveCfg = Release|x86
+		{92225543-F2BB-47BD-B52F-2284B8B5C3AB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
