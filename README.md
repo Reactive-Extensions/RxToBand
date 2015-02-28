@@ -16,7 +16,8 @@ var lockedHeartrate = from h in heartRate.OnlyWhenWorn(contact)
 Thanks to the compositional nature of Rx, one can write elaborate sensor data analyses in very few lines of code. For example,  computing statistics of heart rate using Window and aggregation operators:
 
 ```csharp
-var heartrateStats = (from w in lockedHeartrate.Window(TimeSpan.FromSeconds(60), TimeSpan.FromSeconds(10))
+var heartrateStats = (from w in lockedHeartrate.Window(TimeSpan.FromSeconds(60),
+                                                       TimeSpan.FromSeconds(10))
                       let d = w.DefaultIfEmpty()
                       from s in Observable.CombineLatest(d.Average(), d.Min(), d.Max(),
                                                          (avg, min, max) => new
