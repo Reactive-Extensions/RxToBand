@@ -3,6 +3,8 @@ Reactive Extensions (Rx) support for the Microsoft Band
 
 Adds a few extension methods for the IBandSensor<T> interface in the Microsoft Band SDK to enable writing reactive queries against the sensors. This is a quick preview of what's possible with Rx and the Band SDK; the APIs provided here are subject to change.
 
+<img src="https://github.com/Reactive-Extensions/RxToBand/blob/master/RxToBand/RxToBandSample/Assets/Logo.scale-240.png?raw=true" width="200px"/>
+
 A simple example of a reactive query is shown below:
 
 ```csharp
