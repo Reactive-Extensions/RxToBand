@@ -24,7 +24,7 @@ var heartrateStats = (from w in lockedHeartrate.Window(TimeSpan.FromSeconds(60),
                                                              Max = max
                                                          })
                       select s.ToString())
-                    .StartWith("Hold on for a minute...");
+                     .StartWith("Hold on for a minute...");
 ```
 
 Have fun!
