@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="RxToBandSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RxToBandSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Rx to Band Examples" VerticalAlignment="Top" Height="23" Width="380" FontSize="24"/>
+        
+            <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="240" Click="Connect_Click" FontFamily="Global User Interface"/>
+            <TextBlock x:Name="txtConnect" HorizontalAlignment="Left" Margin="10,100,0,0" TextWrapping="Wrap" Text="Pair a Microsoft Band with the phone and click &quot;Connect&quot;." VerticalAlignment="Top" Height="40" Width="380" FontSize="16"/>
+        
+            <Button x:Name="btnSimpleHeart" Content="Simple heart rate" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="240" Click="SimpleHeartRate_Click" FontFamily="Global User Interface" IsEnabled="False"/>
+            <TextBlock x:Name="txtSimpleHeartRate" HorizontalAlignment="Left" Margin="10,200,0,0" TextWrapping="Wrap" Text="Watch the heart rate on your Microsoft Band and wait until the readings are locked." VerticalAlignment="Top" Height="40" Width="380" FontSize="16"/>
+        
+            <Button x:Name="btnHeartStats" Content="Heart rate stats" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Width="240" Click="HeartStats_Click" FontFamily="Global User Interface" IsEnabled="False"/>
+            <TextBlock x:Name="txtHeartRateStats" HorizontalAlignment="Left" Margin="10,300,0,0" TextWrapping="Wrap" Text="Watch the heart rate on your Microsoft Band and wait until the readings are locked." VerticalAlignment="Top" Height="40" Width="380" FontSize="16"/>
+        
+            <Button x:Name="btnSkinTemperature" Content="Skin temperature" HorizontalAlignment="Left" Margin="10,340,0,0" VerticalAlignment="Top" Width="240" Click="SkinTemperature_Click" FontFamily="Global User Interface" IsEnabled="False"/>
+            <TextBlock x:Name="txtSkinTemperature" HorizontalAlignment="Left" Margin="10,400,0,0" TextWrapping="Wrap" Text="Wear the Band to get skin temperature readings." VerticalAlignment="Top" Height="40" Width="380" FontSize="16"/>
+        
+            <Button x:Name="btnStepGoals" Content="Step goals" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top" Width="240" Click="StepGoals_Click" FontFamily="Global User Interface" IsEnabled="False"/>
+            <TextBlock x:Name="txtStepGoals" HorizontalAlignment="Left" Margin="10,500,0,0" TextWrapping="Wrap" Text="While wearing the Band, go for a walk." VerticalAlignment="Top" Height="40" Width="380" FontSize="16"/>
+        
+            <Button x:Name="btnAverageSpeed" Content="Average speed" HorizontalAlignment="Left" Margin="10,540,0,0" VerticalAlignment="Top" Width="240" Click="AverageSpeed_Click" FontFamily="Global User Interface" IsEnabled="False"/>
+            <TextBlock x:Name="txtAverageSpeed" HorizontalAlignment="Left" Margin="10,600,0,0" TextWrapping="Wrap" Text="Go for a run and a walk with the Band." VerticalAlignment="Top" Height="200" Width="380" FontSize="16"/>
+        </Grid>
+    </ScrollViewer>
+</Page>
