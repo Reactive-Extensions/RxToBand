@@ -240,18 +240,18 @@ namespace RxToBandSample
                 //
                 // Hourly average speed in different modes of transport.
                 //
-                var averageWalkingSpeed = from w in distance.OnlyWhenWorn(contact).Window(TimeSpan.FromHours(1))
-                                          from a in (from d in w
-                                                     group d by d.CurrentMotion into g // TODO: while testing, I didn't get any values other than Idle here
-                                                     from avg in g.DefaultIfEmpty().Average(d => d.Speed)
-                                                     select new { Motion = g.Key, Average = avg })
-                                                    .Aggregate("", (summary, a) => summary += a.ToString() + "\n")
-                                          select a;
+                var averageSpeeds = from w in distance.OnlyWhenWorn(contact).Window(TimeSpan.FromHours(1))
+                                    from a in (from d in w
+                                               group d by d.CurrentMotion into g // TODO: while testing, I didn't get any values other than Idle here
+                                               from avg in g.DefaultIfEmpty().Average(d => d.Speed)
+                                               select new { Motion = g.Key, Average = avg })
+                                              .Aggregate("", (summary, a) => summary += a.ToString() + "\n")
+                                    select a;
 
                 //
                 // Subscribe to observable sequence and update the UI.
                 //
-                _averageSpeedSubscription = averageWalkingSpeed.ObserveOnDispatcher().Subscribe(s => txtAverageSpeed.Text = s);
+                _averageSpeedSubscription = averageSpeeds.ObserveOnDispatcher().Subscribe(s => txtAverageSpeed.Text = s);
 
                 //
                 // Change UI to allow stopping the readings.
