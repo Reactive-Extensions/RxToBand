@@ -16,7 +16,7 @@ namespace RxToBandSample
         private readonly IObservable<IBandHeartRateReading> _heartRate;
         private readonly IObservable<IBandPedometerReading> _pedometer;
         private readonly IObservable<IBandSkinTemperatureReading> _skintemperature;
-        private readonly IObservable<IBandUltravioletLightReading> _ultraviolet;
+        private readonly IObservable<IBandUVReading> _ultraviolet;
 
         /// <summary>
         /// Creates a set of observable wrappers for Band sensors.
@@ -31,7 +31,7 @@ namespace RxToBandSample
             _heartRate = sensorManager.HeartRate.ToObservable();
             _pedometer = sensorManager.Pedometer.ToObservable();
             _skintemperature = sensorManager.SkinTemperature.ToObservable();
-            _ultraviolet = sensorManager.Ultraviolet.ToObservable();
+            _ultraviolet = sensorManager.UV.ToObservable();
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace RxToBandSample
         /// <summary>
         /// Gets an observable sequence for the untraviolet sensor of the Band.
         /// </summary>
-        public IObservable<IBandUltravioletLightReading> Ultraviolet
+        public IObservable<IBandUVReading> Ultraviolet
         {
             get { return _ultraviolet; }
         }
